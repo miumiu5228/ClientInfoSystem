@@ -1,0 +1,171 @@
+﻿@model ApplicationCore.Models.HomepageDetailsModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+   
+
+    <div class="btn-group float-left mb-3"  role="group" aria-label="Basic example">
+        <a class="btn btn-info" asp-controller="Employee" asp-action="AddEmployee"> Add Employee </a>
+        <a class="btn btn-info" asp-controller="Client" asp-action="AddClient"> Add Client </a>
+        <a class="btn btn-info" asp-controller="Interaction" asp-action="AddInteraction"> Add Interations </a>
+    </div>
+    
+
+
+    @*@foreach (var employee in @Model.Employees)
+        {
+
+            <div class="row mt-5">
+
+                <form method="post" asp-controller="Employee" asp-action="delete" asp-route-id="@employee.Id">
+                    <button type="submit" class="btn btn-sm btn-danger d-none d-md-inline-block">
+                        Delete
+                    </button>
+                </form>
+
+                <form method="get" asp-controller="Employee" asp-action="edit" asp-route-id="@employee.Id">
+                    <button type="submit" class="btn btn-sm btn-danger d-none d-md-inline-block">
+                        Update
+                    </button>
+                </form>
+
+                <a asp-controller="Interaction" asp-action="EmployeeInteraction" asp-route-id="@employee.Id">
+                    @employee.Name
+                </a>
+
+                <div>@employee.Designation</div>
+            </div>
+
+        }*@
+
+  
+    <table class="table table-bordered table-responsive-md">
+        <thead>
+            <tr class="table-info text-uppercase text-dark">
+                <th scope="colgroup">Employee Name</th>
+                <th scope="col">Designation</th>
+                <th scope="col" colspan="2">Operation</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in @Model.Employees)
+            {
+            <tr>
+                
+
+                <td>
+                    <a asp-controller="Interaction" asp-action="EmployeeInteraction" asp-route-id="@employee.Id">
+                        @employee.Name
+                    </a>
+                </td>
+                <td>
+                    <p>@employee.Designation</p>
+                </td>
+                <td>
+                    <form method="post" asp-controller="Employee" asp-action="delete" asp-route-id="@employee.Id">
+                        <button type="submit" class="btn btn-sm btn-danger d-none d-md-inline-block">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+                <td>
+                    <form method="get" asp-controller="Employee" asp-action="edit" asp-route-id="@employee.Id">
+                        <button type="submit" class="btn btn-sm btn-primary d-none d-md-inline-block">
+                            Update
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <table class="table table-bordered table-responsive-md mt-4">
+        <thead>
+            <tr class="table-warning text-uppercase text-dark ">
+                <th scope="colgroup">Client Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col" colspan="2">Operation</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var client in @Model.Clients)
+            {
+            <tr>
+
+
+                <td>
+                    <a asp-controller="Interaction" asp-action="ClientInteraction" asp-route-id="@client.Id">
+                        @client.Name
+                    </a>
+                </td>
+                <td>
+                    <p>@client.Email</p>
+                </td>
+                <td>
+                    <p>@client.Address</p>
+                </td>
+                <td>
+                    <p>@client.Phones</p>
+                </td>
+                <td>
+                    <form method="post" asp-controller="Client" asp-action="delete" asp-route-id="@client.Id">
+                        <button type="submit" class="btn btn-sm btn-danger d-none d-md-inline-block">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+                <td>
+                    <form method="get" asp-controller="Client" asp-action="edit" asp-route-id="@client.Id">
+                        <button type="submit" class="btn btn-sm btn-primary d-none d-md-inline-block">
+                            Update
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+    @*@foreach (var client in @Model.Clients)
+    {
+
+        <div class="row mt-5">
+
+            <form method="post" asp-controller="Client" asp-action="delete" asp-route-id="@client.Id">
+                <button type="submit" class="btn btn-sm btn-danger d-none d-md-inline-block">
+                    Delete
+                </button>
+            </form>
+
+            <form method="get" asp-controller="Client" asp-action="edit" asp-route-id="@client.Id">
+                <button type="submit" class="btn btn-sm btn-danger d-none d-md-inline-block">
+                    Update
+                </button>
+            </form>
+
+            <a asp-controller="Interaction" asp-action="ClientInteraction" asp-route-id="@client.Id">
+                @client.Name
+            </a>
+
+            <div>@client.Email</div>
+            <div>@client.Address</div>
+            <div>@client.Phones</div>
+        </div>
+
+    }*@
+
+
+</div>

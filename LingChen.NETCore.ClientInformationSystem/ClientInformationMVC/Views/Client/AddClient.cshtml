@@ -1,0 +1,40 @@
+﻿@model ApplicationCore.Models.ClientRequestModel
+
+
+<h1>Create Client</h1>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <form asp-action="AddClient">
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="form-group">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" class="form-control">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phones">Phones</label>
+                <input asp-for="Phones" class="form-control">
+                <span asp-validation-for="Phones" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address">Address</label>
+                <input asp-for="Address" class="form-control">
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+           
+
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+
+    </div>
+</div>

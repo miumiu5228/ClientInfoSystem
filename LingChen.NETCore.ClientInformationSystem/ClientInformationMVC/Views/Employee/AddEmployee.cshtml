@@ -1,0 +1,34 @@
+﻿@model ApplicationCore.Models.EmployeeRequestModel
+   
+
+<h1>Create Employee</h1>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <form asp-action="AddEmployee">
+
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <div class="form-group">
+                <label  asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password" class="form-control">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Designation">Designation</label>
+                <input asp-for="Designation" class="form-control">
+                <span asp-validation-for="Designation" class="text-danger"></span>
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+
+    </div>
+</div>

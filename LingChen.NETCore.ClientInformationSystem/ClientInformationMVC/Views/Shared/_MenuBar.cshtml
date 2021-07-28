@@ -1,0 +1,38 @@
+﻿
+@using ApplicationCore.ServiceInterfaces
+@inject ICurrentUser currentUser
+
+@if (User.Identity.IsAuthenticated)
+{
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">Client Information</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </div>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav flex-grow-1">
+        
+            <li style="color:white; list-style:none; margin-right:10px">
+                @currentUser.FullName
+            </li>
+                  
+            <li  style="list-style: none; margin-right: 27px;">
+                <form method="get" asp-controller="Account" asp-action="Logout">
+                    <button type="submit"   style="width:90px"   class="btn btn-sm btn-info d-none d-md-inline-block">
+                        Log Out
+                    </button>
+                </form>
+               
+            </li>
+                    
+           
+        </ul>
+    </div>
+   
+</nav>
+}

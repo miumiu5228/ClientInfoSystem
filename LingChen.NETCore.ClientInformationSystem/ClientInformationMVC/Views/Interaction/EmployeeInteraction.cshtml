@@ -1,0 +1,54 @@
+﻿@model List<ApplicationCore.Models.InteractionResponseModel>
+
+
+
+
+
+<table class="table table-bordered mt-5">
+    <thead>
+        <tr>
+
+            <th scope="col">Employee Name</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">Interaction Date</th>
+            <th scope="col">Meeting Type</th>
+            <th scope="col">Remarks</th>
+            <th scope="col" colspan="2">Operation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+        <tr>
+           
+            <td>
+                @c.EmployeeName
+            </td>
+            <td>@c.ClientName</td>
+            <td>@c.IntDate</td>
+            <td>
+                @c.IntType
+            </td>
+            <td>
+                @c.Remarks
+            </td>
+            <td>
+                <form method="post" asp-controller="Interaction" asp-action="delete" asp-route-id="@c.Id">
+                    <button type="submit" class="btn btn-sm btn-danger d-none d-md-inline-block">
+                        Delete
+                    </button>
+                </form>
+            </td>
+            <td>
+                <form method="get" asp-controller="Interaction" asp-action="Edit" asp-route-id="@c.Id">
+                    <button type="submit" class="btn btn-sm btn-primary d-none d-md-inline-block">
+                        Update
+                    </button>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+}
