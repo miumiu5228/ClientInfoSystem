@@ -10,14 +10,20 @@ The system stores information about its clients and the interactions done with c
 ## Homepage 
 ![screenshot](Homepage.png)
 
-## Login/Register
-![screenshot](Login.png)
-![screenshot](Register.png)
-
 ## Create Employee/Client/Interaction
 ![screenshot](CreateEmp.png)
 ![screenshot](CreateClient.png)
 ![screenshot](CreateInteraction.png)
+
+## Update Interaction by certain Employee
+![screenshot](employeeInteration.png)
+
+## Update Interaction by certain Client
+![screenshot](clientInteration.png)
+
+## Login/Register
+![screenshot](Login.png)
+![screenshot](Register.png)
 
 ## Database diagram
 ![screenshot](ClientInformationDigram.png)
