@@ -1,5 +1,5 @@
 # Antra_Final_ClientInfoSystem
-Ling's final evaluation in Antra .NET Core training
+
 
 ## Homepage 
 ![screenshot](Homepage.png)
