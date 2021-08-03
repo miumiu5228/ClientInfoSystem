@@ -11,7 +11,6 @@ The system stores information about its clients and the interactions done with c
 ![screenshot](Homepage.png)
 
 ## Login/Register
-<li>The login page also has a cookie authentication to check if the time expired.</li>
 ![screenshot](Login.png)
 ![screenshot](Register.png)
 
