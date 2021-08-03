@@ -1,5 +1,5 @@
 # Antra_Final_ClientInfoSystem
-The system stores information about its clients and the interactions done with clients. I develop it with ASP .Net Core. Connect with the database by using Entity Framework Core. Also, creating and updating Database with EF Core Code First approach using migrations. The application include the register and login-in page, homepage, interaction page, etc. The business logic was implemented to extract the correct data and presented in the client side. Also this website contains the webpages, decorated by the BOOTSTRAP.
+The system stores information about its clients and the interactions done with clients. I develop it with ASP .Net Core. Connect with the database by using Entity Framework Core. Also, creating and updating database with EF Core Code First approach using migrations. The application include the register and login-in page, homepage, interaction page, etc. The business logic was implemented to extract the correct data and presented in the client side. Also this website contains the webpages, decorated by the BOOTSTRAP.
 
 <li>The home page displays the dashboard of the Employees list and the Clients list.</li>
 <li>The login page also has a cookie authentication to check if the time expired.</li>
@@ -11,6 +11,7 @@ The system stores information about its clients and the interactions done with c
 ![screenshot](Homepage.png)
 
 ## Login/Register
+<li>The login page also has a cookie authentication to check if the time expired.</li>
 ![screenshot](Login.png)
 ![screenshot](Register.png)
 
