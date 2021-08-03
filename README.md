@@ -15,10 +15,10 @@ The system stores information about its clients and the interactions done with c
 ![screenshot](CreateClient.png)
 ![screenshot](CreateInteraction.png)
 
-## Update Interaction by certain Employee
+## Update/ Delete Interaction by Employee
 ![screenshot](employeeInteration.png)
 
-## Update Interaction by certain Client
+## Update/ Delete Interaction by Client
 ![screenshot](clientInteration.png)
 
 ## Login/Register
